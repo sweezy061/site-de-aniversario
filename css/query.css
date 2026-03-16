@@ -1,0 +1,146 @@
+@media (max-width: 430px) {
+
+    .inicio-body {
+        padding: 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .inicio-container {
+        padding: 35px 20px;
+        border-radius: 20px;
+        max-width: 100%;
+    }
+
+    .inicio-container h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .inicio-texto {
+        font-size: 16px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .btn-inicio {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 40px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .player {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .musica {
+        font-size: 18px;
+    }
+
+    .artista {
+        font-size: 14px;
+    }
+
+    #playBtn {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    h1 {
+        font-size: 2.8rem;
+        margin-bottom: 30px;
+        letter-spacing: 0.5px;
+        text-shadow:
+            0 0 4px rgba(255, 255, 255, 0.5),
+            0 0 8px rgba(255, 255, 255, 0.2);
+    }
+
+    .polaroid {
+        padding: 10px 10px 40px 10px;
+        border-radius: 18px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+        transform: none;
+    }
+
+    .polaroid:hover {
+        transform: scale(1.03);
+    }
+
+    .polaroid img {
+        height: 450px;
+        border-radius: 20px;
+    }
+
+    .polaroid span {
+        margin-top: 18px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+.video-container {
+    margin: 60px auto 60px auto;
+    width: 380px;
+    max-width: 600px;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 20px;
+}
+ 
+
+.btn-video {
+    padding: 16px 28px;
+    font-size: 18px;
+    border-radius: 40px;
+    margin-bottom: 40px;
+}
+
+}

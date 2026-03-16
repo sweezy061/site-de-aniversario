@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Vídeo Fofo 💖</title>
+    <link rel="icon" href="./midia/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/query.css">
+</head>
+
+<body>
+
+    <div class="container fade-in">
+
+        <h1>Vídeo Fofo</h1>
+
+        <p class="texto-romantico">
+            Aqui está o vídeo especial que eu preparei para você!
+            Espero que goste e que ele te faça sorrir tanto quanto você me faz sorrir todos os dias. ❤️
+        </p>
+
+        <div class="video-container">
+            <video controls autoplay>
+                <source src="./video/videofofo.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="./surpresa.html">
+                <button>⬅ Voltar para a Surpresa</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+
+    <script>
+        // JS DIRETO NO HTML - NUNCA FALHA
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.getElementById("btnSurpresa");
+            btn.addEventListener("click", function () {
+                this.classList.add("explode");
+                setTimeout(() => {
+                    window.location.href = "surpresa.html";
+                }, 800);
+            });
+
+            // Corações flutuando
+            setInterval(() => {
+                const heart = document.createElement("div");
+                heart.innerText = "❤️";
+                heart.classList.add("hearts");
+                heart.style.cssText = `
+                    position: fixed; bottom: -50px; left: ${Math.random() * 100}vw;
+                    font-size: ${Math.random() * 20 + 15}px; pointer-events: none;
+                    animation: float 5s linear forwards;
+                `;
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }, 400);
+        });
+
+        // CORAÇÕES SUBINDO
+        setInterval(() => {
+
+            const heart = document.createElement("div");
+            heart.innerText = "❤️";
+            heart.classList.add("hearts");
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+
+        }, 400);
+    </script>
+
+</body>
+
+</html>

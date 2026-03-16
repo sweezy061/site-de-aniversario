@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário ❤️</title>
+    <link rel="icon" href="./midia/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/query.css">
+</head>
+
+<body class="inicio-body">
+
+    <div class="inicio-container fade-in">
+
+        <h1>🎉 Feliz Aniversário, Meu Amor ❤️</h1>
+
+        <p class="inicio-texto">
+            Hoje é o dia da pessoa mais especial da minha vida.<br>
+            Que seja cheio de sorrisos, abraços e momentos inesquecíveis!
+        </p>
+
+        <button id="btnSurpresa" class="btn-inicio">
+            Clique aqui para a surpresa 💖
+        </button>
+
+        <div class="hearts-container"></div>
+
+    </div>
+    <script src="./js/script.js"></script>
+    <script>
+        // JS DIRETO NO HTML - NUNCA FALHA
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.getElementById("btnSurpresa");
+            btn.addEventListener("click", function () {
+                this.classList.add("explode");
+                setTimeout(() => {
+                    window.location.href = "surpresa.html";
+                }, 800);
+            });
+
+                // Corações flutuando
+                setInterval(() => {
+                    const heart = document.createElement("div");
+                    heart.innerText = "❤️";
+                    heart.classList.add("hearts");
+                    heart.style.cssText = `
+                    position: fixed; bottom: -50px; left: ${Math.random() * 100}vw;
+                    font-size: ${Math.random() * 20 + 15}px; pointer-events: none;
+                    animation: float 5s linear forwards;
+                `;
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 5000);
+                }, 400);
+            });
+
+            // CORAÇÕES SUBINDO
+            setInterval(() => {
+
+                const heart = document.createElement("div");
+                heart.innerText = "❤️";
+                heart.classList.add("hearts");
+
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+
+            }, 400);
+    </script>
+</body>
+
+</html>
